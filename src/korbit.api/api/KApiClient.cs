@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
 using Korbit.LIB;
+using Korbit.LIB.Configuration;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace Korbit.API
 {
@@ -39,7 +42,7 @@ namespace Korbit.API
         /// <param name="endpoint"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        public async Task<T> CallApiAsync<T>(string endpoint, Dictionary<string, object> args = null) where T : new()
+        public async Task<T> CallApiPostAsync<T>(string endpoint, Dictionary<string, object> args = null) where T : new()
         {
             var _request = CreateJsonRequest(endpoint, Method.POST);
             {
@@ -52,12 +55,6 @@ namespace Korbit.API
                             _params.Add(a.Key, a.Value);
                     }
                 }
-
-                _request.AddHeader("api-client-type", "2");
-
-                var _headers = GetHttpHeaders(endpoint, _params, __connect_key, __secret_key);
-                foreach (var h in _headers)
-                    _request.AddHeader(h.Key, h.Value.ToString());
 
                 foreach (var a in _params)
                     _request.AddParameter(a.Key, a.Value);
