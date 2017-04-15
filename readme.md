@@ -1,4 +1,4 @@
-﻿##Korbit C# API SDK
+## Korbit C-Sharp API SDK
 
 This SDK is intended to develop korbit's API for bitcoin/ethereum trading with C#.
 
