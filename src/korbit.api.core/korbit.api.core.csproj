@@ -1,7 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <AssemblyName>Korbit.API.Core</AssemblyName>
+    <RootNamespace>Korbit.API.Core</RootNamespace>
   </PropertyGroup>
 
 </Project>

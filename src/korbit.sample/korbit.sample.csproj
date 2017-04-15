@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>korbit.sample</RootNamespace>
-    <AssemblyName>korbit.sample</AssemblyName>
+    <RootNamespace>Korbit.Sample</RootNamespace>
+    <AssemblyName>Korbit.Sample</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
