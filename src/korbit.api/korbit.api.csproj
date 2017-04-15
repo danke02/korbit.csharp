@@ -32,8 +32,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +49,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="example.cs" />
+    <Compile Include="api\public\publicConstants.cs" />
+    <Compile Include="api\public\publicDetailedTicker.cs" />
+    <Compile Include="api\public\publicApi.cs" />
+    <Compile Include="api\public\publicOrderBook.cs" />
+    <Compile Include="api\KApiClient.cs" />
+    <Compile Include="api\KApiResult.cs" />
+    <Compile Include="lib\types\orderCategory.cs" />
+    <Compile Include="api\public\publicTicker.cs" />
+    <Compile Include="api\public\publicTransactions.cs" />
+    <Compile Include="lib\types\transactionType.cs" />
+    <Compile Include="lib\types\version.cs" />
+    <Compile Include="lib\configuration\config.cs" />
+    <Compile Include="lib\configuration\logger.cs" />
+    <Compile Include="lib\configuration\registry.cs" />
+    <Compile Include="lib\configuration\stringextensions.cs" />
+    <Compile Include="lib\configuration\unixtime.cs" />
+    <Compile Include="lib\extend.cs" />
+    <Compile Include="lib\models\currencyRate.cs" />
+    <Compile Include="lib\models\periodData.cs" />
+    <Compile Include="lib\models\transactionType.cs" />
+    <Compile Include="lib\OApiRequest.cs" />
+    <Compile Include="lib\OWebClient.cs" />
+    <Compile Include="lib\queue\tradeHistory.cs" />
+    <Compile Include="lib\serialize\RestSharpJsonNetDeserializer.cs" />
+    <Compile Include="lib\serialize\RestSharpJsonNetSerializer.cs" />
+    <Compile Include="lib\types\coinType.cs" />
+    <Compile Include="lib\types\currencyType.cs" />
+    <Compile Include="lib\types\dealerType.cs" />
+    <Compile Include="lib\types\orderType.cs" />
+    <Compile Include="lib\types\orderTypeConverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

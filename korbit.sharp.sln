@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1F4A270-5796-4483-8383-35F15CCAB36E}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E76D87F1-92D1-4911-8EC1-8E7249DD0C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api", "src\korbit.api\korbit.api.csproj", "{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.sample", "src\korbit.sample\korbit.sample.csproj", "{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logo-files", "logo-files", "{20C93736-714E-4F0A-846B-436F8C5A08D8}"
+	ProjectSection(SolutionItems) = preProject
+		logo-files\korbit.api.ico = logo-files\korbit.api.ico
+		logo-files\korbit.api.png = logo-files\korbit.api.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api.core", "src\korbit.api.core\korbit.api.core.csproj", "{FF1E15F3-9098-4198-9890-BAD9B1891971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.sample.core", "src\korbit.sample.core\korbit.sample.core.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+		{CED5C7E9-AB18-49D1-90CA-076DC1F672DC} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+		{FF1E15F3-9098-4198-9890-BAD9B1891971} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+	EndGlobalSection
+EndGlobal
