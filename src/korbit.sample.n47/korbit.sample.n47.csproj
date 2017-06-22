@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Korbit.Sample</RootNamespace>
     <AssemblyName>Korbit.Sample</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\korbit.api\korbit.api.csproj">
+    <ProjectReference Include="..\korbit.api.n47\korbit.api.n47.csproj">
       <Project>{42ad0b11-e524-4b7c-9ed8-24ce8eef229a}</Project>
-      <Name>korbit.api</Name>
+      <Name>korbit.api.n47</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
