@@ -1,7 +1,7 @@
 ﻿using Korbit.API.Public;
 using System;
 
-namespace korbit.sample.core
+namespace Korbit.Sample
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace korbit.sample.core
         /// </summary>
         public static async void XPublicApi()
         {
-            var _public_api = new KPublicApi();
+            var _public_api = new XPublicApi();
 
             var _ticker = await _public_api.GetTicker();
             Console.WriteLine(_ticker.last);

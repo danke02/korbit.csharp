@@ -7,16 +7,16 @@ namespace Korbit.API.Public
     /// <summary>
     /// Check the current status of the market by listing open and filled orders.
     /// </summary>
-    public class KPublicApi
+    public class XPublicApi
     {
-        private KApiClient __api_client = null;
+        private XApiClient __api_client = null;
 
-        private KApiClient APiClient
+        private XApiClient APiClient
         {
             get
             {
                 if (__api_client == null)
-                    __api_client = new KApiClient();
+                    __api_client = new XApiClient();
                 return __api_client;
             }
         }

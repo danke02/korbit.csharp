@@ -3,9 +3,9 @@
     /// <summary>
     /// 
     /// </summary>
-    public class KApiResult
+    public class XApiResult
     {
-        public KApiResult()
+        public XApiResult()
         {
             this.success = false;
             this.message = "";

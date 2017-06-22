@@ -10,7 +10,7 @@ namespace Korbit.API
     /// <summary>
     /// 
     /// </summary>
-    public class KApiClient : IDisposable
+    public class XApiClient : IDisposable
     {
         private const string __api_url = "https://api.korbit.co.kr";
 
@@ -20,14 +20,14 @@ namespace Korbit.API
         private const string __content_type = "application/json";
         private const string __user_agent = "btc-trading/5.2.2017.01";
 
-        public KApiClient()
+        public XApiClient()
         {
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public KApiClient(string connect_key, string secret_key)
+        public XApiClient(string connect_key, string secret_key)
             : base()
         {
             __connect_key = connect_key;
