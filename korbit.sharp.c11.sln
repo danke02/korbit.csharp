@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logo-files", "logo-files", 
 		logo-files\korbit.api.png = logo-files\korbit.api.png
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.api.s16", "src\korbit.api.s16\korbit.api.s16.csproj", "{FF1E15F3-9098-4198-9890-BAD9B1891971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.api.s16", "source\korbit.api.s16\korbit.api.s16.csproj", "{FF1E15F3-9098-4198-9890-BAD9B1891971}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample.c11", "src\korbit.sample.c11\korbit.sample.c11.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample.c11", "source\korbit.sample.c11\korbit.sample.c11.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

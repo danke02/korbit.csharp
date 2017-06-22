@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26606.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E76D87F1-92D1-4911-8EC1-8E7249DD0C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api.n47", "src\korbit.api.n47\korbit.api.n47.csproj", "{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api.n47", "source\korbit.api.n47\korbit.api.n47.csproj", "{42AD0B11-E524-4B7C-9ED8-24CE8EEF229A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.sample.n47", "src\korbit.sample.n47\korbit.sample.n47.csproj", "{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.sample.n47", "source\korbit.sample.n47\korbit.sample.n47.csproj", "{CED5C7E9-AB18-49D1-90CA-076DC1F672DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
