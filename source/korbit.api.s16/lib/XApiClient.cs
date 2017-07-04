@@ -1,40 +1,67 @@
-﻿using Korbit.LIB.Serialize;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using OdinSdk.BaseLib.Serialize;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
-namespace Korbit.API
+namespace XCT.BaseLib.API
 {
     /// <summary>
     /// 
     /// </summary>
     public class XApiClient : IDisposable
     {
-        private const string __api_url = "https://api.korbit.co.kr";
+        private string __api_url = "";
 
-        private string __connect_key;
-        private string __secret_key;
+        protected string __connect_key;
+        protected string __secret_key;
 
-        private const string __content_type = "application/json";
-        private const string __user_agent = "btc-trading/5.2.2017.01";
-
-        public XApiClient()
-        {
-        }
+        protected const string __content_type = "application/json";
+        protected const string __user_agent = "btc-trading/5.2.2017.01";
 
         /// <summary>
         /// 
         /// </summary>
-        public XApiClient(string connect_key, string secret_key)
-            : base()
+        public XApiClient(string api_url, string connect_key, string secret_key)
         {
+            __api_url = api_url;
             __connect_key = connect_key;
             __secret_key = secret_key;
         }
 
-        protected IRestClient CreateJsonClient(string baseurl)
+        private static char[] __to_digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
+
+        public byte[] EncodeHex(byte[] data)
+        {
+            int l = data.Length;
+            byte[] _result = new byte[l << 1];
+
+            // two characters form the hex value.
+            for (int i = 0, j = 0; i < l; i++)
+            {
+                _result[j++] = (byte)__to_digits[(0xF0 & data[i]) >> 4];
+                _result[j++] = (byte)__to_digits[0x0F & data[i]];
+            }
+
+            return _result;
+        }
+
+        public string EncodeURIComponent(Dictionary<string, object> rgData)
+        {
+            string _result = String.Join("&", rgData.Select((x) => String.Format("{0}={1}", x.Key, x.Value)));
+
+            _result = System.Net.WebUtility.UrlEncode(_result)
+                        .Replace("+", "%20").Replace("%21", "!")
+                        .Replace("%27", "'").Replace("%28", "(")
+                        .Replace("%29", ")").Replace("%26", "&")
+                        .Replace("%3D", "=").Replace("%7E", "~");
+
+            return _result;
+        }
+
+        public IRestClient CreateJsonClient(string baseurl)
         {
             var _client = new RestClient(baseurl);
             {
@@ -47,7 +74,7 @@ namespace Korbit.API
             return _client;
         }
 
-        protected IRestRequest CreateJsonRequest(string resource, Method method = Method.GET)
+        public IRestRequest CreateJsonRequest(string resource, Method method = Method.GET)
         {
             var _request = new RestRequest(resource, method)
             {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-namespace Korbit.API.Public
+namespace XCT.BaseLib.API.Korbit.Public
 {
     /// <summary>
     /// 

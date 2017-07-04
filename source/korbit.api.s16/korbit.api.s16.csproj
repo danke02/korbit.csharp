@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="1.1.2" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="OdinSdk.BaseLib.Core" Version="1.0.8" />
     <PackageReference Include="RestSharp.NetCore" Version="105.2.3" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
     <PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />
@@ -18,7 +19,7 @@
   <ItemGroup>
     <Folder Include="api\user\" />
     <Folder Include="api\trading\" />
-    <Folder Include="lib\security\" />
+    <Folder Include="lib\" />
   </ItemGroup>
 
 </Project>

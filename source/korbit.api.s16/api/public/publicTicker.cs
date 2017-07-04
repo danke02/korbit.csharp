@@ -1,4 +1,4 @@
-﻿namespace Korbit.API.Public
+﻿namespace XCT.BaseLib.API.Korbit.Public
 {
     /// <summary>
     /// 시장 현황 (Ticker)

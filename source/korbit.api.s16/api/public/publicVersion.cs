@@ -1,32 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Korbit.LIB.Types
+﻿namespace XCT.BaseLib.API.Korbit
 {
     /// <summary>
     /// 
     /// </summary>
-    public enum CurrencyType
+    public class Version
     {
         /// <summary>
         /// 
         /// </summary>
-        cny,
+        public int major;
 
         /// <summary>
         /// 
         /// </summary>
-        krw,
+        public int minor;
 
         /// <summary>
         /// 
         /// </summary>
-        usd,
+        public int revision;
 
         /// <summary>
         /// 
         /// </summary>
-        btc
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return major + "." + minor + "." + revision;
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Korbit.API.Public
+﻿namespace XCT.BaseLib.API.Korbit.Public
 {
     /// <summary>
     /// 각종 제약조건 ( Constants )

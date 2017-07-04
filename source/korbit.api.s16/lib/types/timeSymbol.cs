@@ -1,11 +1,10 @@
-﻿namespace Korbit.API.Types
+﻿namespace XCT.BaseLib.Types
 {
     /// <summary>
     /// 
     /// </summary>
-    public enum Symbol
+    public enum TimeSymbol
     {
-
         /// <summary>
         /// 
         /// </summary>

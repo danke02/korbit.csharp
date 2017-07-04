@@ -2,7 +2,7 @@
 using System;
 using System.Globalization;
 
-namespace Korbit.API.Public
+namespace XCT.BaseLib.API.Korbit.Public
 {
     /// <summary>
     /// 체결 내역 ( List of Filled Orders )

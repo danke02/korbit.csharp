@@ -1,5 +1,5 @@
-﻿using Korbit.API.Public;
-using System;
+﻿using System;
+using XCT.BaseLib.API.Korbit.Public;
 
 namespace Korbit.Sample
 {
@@ -10,21 +10,21 @@ namespace Korbit.Sample
         /// </summary>
         public static async void XPublicApi()
         {
-            var _public_api = new XPublicApi();
+            var _public_api = new KPublicApi();
 
-            var _ticker = await _public_api.GetTicker();
+            var _ticker = await _public_api.Ticker();
             Console.WriteLine(_ticker.last);
 
-            var _deailed_ticker = await _public_api.GetDetailedTicker();
+            var _deailed_ticker = await _public_api.DetailedTicker();
             Console.WriteLine(_deailed_ticker.last);
 
-            var _order_book = await _public_api.GetOrderBook();
+            var _order_book = await _public_api.OrderBook();
             Console.WriteLine(_order_book.timestamp);
 
-            var _transactions = await _public_api.GetTransactions();
+            var _transactions = await _public_api.Transactions();
             Console.WriteLine(_transactions.Count);
 
-            var _constants = await _public_api.GetConstants();
+            var _constants = await _public_api.Constants();
             Console.WriteLine(_constants.minTradableLevel);
         }
 

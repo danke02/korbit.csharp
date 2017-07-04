@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Korbit.API.Types;
+using XCT.BaseLib.Types;
 
-namespace Korbit.API.Public
+namespace XCT.BaseLib.API.Korbit.Public
 {
     /// <summary>
     /// Check the current status of the market by listing open and filled orders.
     /// </summary>
-    public class XPublicApi
+    public class KPublicApi
     {
-        private XApiClient __api_client = null;
+        private KorbitClient __api_client = null;
 
-        private XApiClient APiClient
+        private KorbitClient APiClient
         {
             get
             {
                 if (__api_client == null)
-                    __api_client = new XApiClient();
+                    __api_client = new KorbitClient();
                 return __api_client;
             }
         }
@@ -25,7 +25,7 @@ namespace Korbit.API.Public
         /// https://bitbucket.org/korbit/public-api/wiki/browse/
         /// </summary>
         /// <returns></returns>
-        public async Task<Version> GetVersion()
+        public async Task<Version> Version()
         {
             return await APiClient.CallApiGetAsync<Version>("/v1/version");
         }
@@ -37,7 +37,7 @@ namespace Korbit.API.Public
         /// Bitcoin trading is default. As our BETA service, you can also specify “etc_krw” for Ethereum Classic 
         /// trading and “eth_krw” for Ethereum trading.</param>
         /// <returns></returns>
-        public async Task<PublicTicker> GetTicker(string currency_pair = "btc_krw")
+        public async Task<PublicTicker> Ticker(string currency_pair = "btc_krw")
         {
             var _params = new Dictionary<string, object>();
             {
@@ -54,7 +54,7 @@ namespace Korbit.API.Public
         /// Bitcoin trading is default. As our BETA service, you can also specify “etc_krw” for 
         /// Ethereum Classic trading and “eth_krw” for Ethereum trading.</param>
         /// <returns></returns>
-        public async Task<PublicDetailedTicker> GetDetailedTicker(string currency_pair = "btc_krw")
+        public async Task<PublicDetailedTicker> DetailedTicker(string currency_pair = "btc_krw")
         {
             var _params = new Dictionary<string, object>();
             {
@@ -72,7 +72,7 @@ namespace Korbit.API.Public
         /// Ethereum Classic trading and “eth_krw” for Ethereum trading.</param>
         /// <param name="category">List ask orders only if category=“ask”, bid orders only if category=“bid”, all orders if category=“all”.</param>
         /// <returns></returns>
-        public async Task<OrderBook> GetOrderBook(string currency_pair = "btc_krw", OrderCategory category = OrderCategory.all)
+        public async Task<OrderBook> OrderBook(string currency_pair = "btc_krw", OrderCategory category = OrderCategory.all)
         {
             var _params = new Dictionary<string, object>();
             {
@@ -93,7 +93,7 @@ namespace Korbit.API.Public
         /// If this parameter is specified as minute, it queries data within the last minute, 
         /// hour means the last hour, day means the last 24 hours.</param>
         /// <returns></returns>
-        public async Task<List<Transaction>> GetTransactions(string currency_pair = "btc_krw", Symbol time = Symbol.hour)
+        public async Task<List<Transaction>> Transactions(string currency_pair = "btc_krw", TimeSymbol time = TimeSymbol.hour)
         {
             var _params = new Dictionary<string, object>();
             {
@@ -108,7 +108,7 @@ namespace Korbit.API.Public
         /// You can get constant values such as fee rates and minimum amount of BTC to transfer, etc.
         /// </summary>
         /// <returns>Constants</returns>
-        public async Task<Constants> GetConstants()
+        public async Task<Constants> Constants()
         {
             return await APiClient.CallApiGetAsync<Constants>("/v1/constants");
         }
