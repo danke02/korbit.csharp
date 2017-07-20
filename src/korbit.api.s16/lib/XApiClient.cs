@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using OdinSdk.BaseLib.Configuration;
 using OdinSdk.BaseLib.Serialize;
 using RestSharp;
 using System;
@@ -13,6 +14,8 @@ namespace XCT.BaseLib.API
     /// </summary>
     public class XApiClient : IDisposable
     {
+        protected static CLogger __clogger = new CLogger();
+
         private string __api_url = "";
 
         protected string __connect_key;
@@ -67,7 +70,8 @@ namespace XCT.BaseLib.API
             {
                 _client.RemoveHandler(__content_type);
                 _client.AddHandler(__content_type, new RestSharpJsonNetDeserializer());
-                _client.Timeout = 10 * 1000;
+                _client.Timeout = 5 * 1000;
+                _client.ReadWriteTimeout = 32 * 1000;
                 _client.UserAgent = __user_agent;
             }
 
@@ -112,13 +116,14 @@ namespace XCT.BaseLib.API
 
             var _client = CreateJsonClient(__api_url);
             {
-                var tcs = new TaskCompletionSource<T>();
-                _client.ExecuteAsync(_request, response =>
+                var _tcs = new TaskCompletionSource<IRestResponse>();
+                var _handle = _client.ExecuteAsync(_request, response =>
                 {
-                    tcs.SetResult(JsonConvert.DeserializeObject<T>(response.Content));
+                    _tcs.SetResult(response);
                 });
 
-                return await tcs.Task;
+                var _response = await _tcs.Task;
+                return JsonConvert.DeserializeObject<T>(_response.Content);
             }
         }
 
@@ -141,13 +146,14 @@ namespace XCT.BaseLib.API
 
             var _client = CreateJsonClient(__api_url);
             {
-                var tcs = new TaskCompletionSource<T>();
-                _client.ExecuteAsync(_request, response =>
+                var _tcs = new TaskCompletionSource<IRestResponse>();
+                var _handle = _client.ExecuteAsync(_request, response =>
                 {
-                    tcs.SetResult(JsonConvert.DeserializeObject<T>(response.Content));
+                    _tcs.SetResult(response);
                 });
 
-                return await tcs.Task;
+                var _response = await _tcs.Task;
+                return JsonConvert.DeserializeObject<T>(_response.Content);
             }
         }
 

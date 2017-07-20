@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace XCT.BaseLib.API.Korbit.User
 {
@@ -106,5 +107,19 @@ namespace XCT.BaseLib.API.Korbit.User
         /// The available amount of BTC and KRW for the user. It is calculated by balance - pendingOut - pendingOrders.
         /// </summary>
         public List<CurrencyValue> available;
+
+        /// <summary>
+        /// 사용 가능 QTY
+        /// </summary>
+        public decimal available_qty(string coin_name)
+        {
+            var _result = 0.0m;
+
+            var _available_coin = this.balance.Where(b => b.currency.ToLower() == coin_name.ToLower()).SingleOrDefault();
+            if (_available_coin != null)
+                _result = _available_coin.value;
+
+            return _result;
+        }
     }
 }

@@ -37,14 +37,14 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// Bitcoin trading is default. As our BETA service, you can also specify “etc_krw” for Ethereum Classic 
         /// trading and “eth_krw” for Ethereum trading.</param>
         /// <returns></returns>
-        public async Task<PublicTicker> Ticker(string currency_pair = "btc_krw")
+        public async Task<PublicTickerData> Ticker(string currency_pair = "btc_krw")
         {
             var _params = new Dictionary<string, object>();
             {
                 _params.Add("currency_pair", currency_pair);
             }
 
-            return await APiClient.CallApiGetAsync<PublicTicker>("/v1/ticker", _params);
+            return await APiClient.CallApiGetAsync<PublicTickerData>("/v1/ticker", _params);
         }
 
         /// <summary>

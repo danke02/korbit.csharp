@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -44,7 +45,7 @@ namespace XCT.BaseLib.API.Korbit
                 if (__access_token.CheckExpired() == true)
                     __access_token = await GetRefreshToken(__access_token);
             }
-            else
+            else if (String.IsNullOrEmpty(__connect_key) == false)
                 __access_token = await GetAccessToken();
 
             return __access_token;
@@ -103,17 +104,19 @@ namespace XCT.BaseLib.API.Korbit
             }
 
             var _access_token = await AccessToken();
-            _request.AddHeader("Authorization", $"Bearer {_access_token.access_token}");
+            if (_access_token != null)
+                _request.AddHeader("Authorization", $"Bearer {_access_token.access_token}");
 
             var _client = CreateJsonClient(__api_url);
             {
-                var tcs = new TaskCompletionSource<T>();
-                _client.ExecuteAsync(_request, response =>
+                var _tcs = new TaskCompletionSource<IRestResponse>();
+                var _handle = _client.ExecuteAsync(_request, response =>
                 {
-                    tcs.SetResult(JsonConvert.DeserializeObject<T>(response.Content));
+                    _tcs.SetResult(response);
                 });
 
-                return await tcs.Task;
+                var _response = await _tcs.Task;
+                return JsonConvert.DeserializeObject<T>(_response.Content);
             }
         }
 

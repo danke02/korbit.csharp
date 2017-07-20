@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26606.0
+VisualStudioVersion = 15.0.26621.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1F4A270-5796-4483-8383-35F15CCAB36E}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logo-files", "logo-files", 
 		logo-files\korbit.api.png = logo-files\korbit.api.png
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.api.s16", "source\korbit.api.s16\korbit.api.s16.csproj", "{FF1E15F3-9098-4198-9890-BAD9B1891971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.api.s16", "src\korbit.api.s16\korbit.api.s16.csproj", "{FF1E15F3-9098-4198-9890-BAD9B1891971}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample.c11", "source\korbit.sample.c11\korbit.sample.c11.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample.c11", "src\korbit.sample.c11\korbit.sample.c11.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +42,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FF1E15F3-9098-4198-9890-BAD9B1891971} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA086DB4-1D3F-4B6E-A1FA-222F45B8C691}
 	EndGlobalSection
 EndGlobal

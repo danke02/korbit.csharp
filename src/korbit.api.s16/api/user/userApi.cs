@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace XCT.BaseLib.API.Korbit.User
 {
@@ -48,9 +49,14 @@ namespace XCT.BaseLib.API.Korbit.User
         ///
         /// </summary>
         /// <returns>Constants</returns>
-        public async Task<UserWallet> UserWallet()
+        public async Task<UserWallet> UserWallet(string currency_pair = "btc_krw")
         {
-            return await UserClient.CallApiGetAsync<UserWallet>("/v1/user/wallet");
+            var _params = new Dictionary<string, object>();
+            {
+                _params.Add("currency_pair", currency_pair);
+            }
+
+            return await UserClient.CallApiGetAsync<UserWallet>("/v1/user/wallet", _params);
         }
     }
 }
