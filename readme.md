@@ -1,4 +1,4 @@
-## Korbit C-Sharp API SDK [![Build status](https://ci.appveyor.com/api/projects/status/dnp9i3t6sexv9tpa?svg=true)](https://ci.appveyor.com/project/lisa3907/coinone-csharp)
+## Korbit C-Sharp API SDK [![Build status](https://ci.appveyor.com/api/projects/status/dnp9i3t6sexv9tpa?svg=true)](https://ci.appveyor.com/project/lisa3907/korbit-csharp)
 
 This SDK is intended to develop korbit's API for bitcoin/ethereum trading with C#.
 
