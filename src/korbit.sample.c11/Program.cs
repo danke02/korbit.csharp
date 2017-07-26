@@ -48,7 +48,7 @@ namespace Korbit.Sample
         /// <summary>
         /// 2. User API
         /// </summary>
-        public static async void XUserApi(int skip_step = 3)
+        public static async void XUserApi(int debug_step = 3)
         {
             var __info_api = new KUserApi("", "", "", "");
 
@@ -80,7 +80,7 @@ namespace Korbit.Sample
         /// <summary>
         /// 3. Trade API
         /// </summary>
-        public static async void XTradeApi(int skip_step = 1)
+        public static async void XTradeApi(int debug_step = 1)
         {
             var __trade_api = new KTradeApi("", "", "", "");
 
