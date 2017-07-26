@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace XCT.BaseLib.API.Korbit.User
@@ -57,6 +58,80 @@ namespace XCT.BaseLib.API.Korbit.User
             }
 
             return await UserClient.CallApiGetAsync<UserWallet>("/v1/user/wallet", _params);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currency_pair"></param>
+        /// <returns></returns>
+        public async Task<Transactions> Transactions(string currency_pair = "btc_krw")
+        {
+            var _params = new Dictionary<string, object>();
+            {
+                _params.Add("currency_pair", currency_pair);
+            }
+
+            return await UserClient.CallApiGetAsync<Transactions>("/v1/user/transactions", _params);
+        }
+
+        /// <summary>
+        /// Request BTC Withdrawal
+        /// </summary>
+        /// <param name="currency">A mandatory parameter. Currently only currency=“btc”, which means Bitcoin is supported.</param>
+        /// <param name="amount">The amount of BTC to withdraw.</param>
+        /// <param name="address">The BTC address to where the BTC is sent.</param>
+        /// <param name="fee_priority">Optional parameter to select withdrawal fee. Set “normal” for fee 0.001 or “saver” for 0.0005. If it is not set, “normal” fee is applied. (Starting from 2017-03-17 2pm KST)</param>
+        /// <returns></returns>
+        public async Task<CoinsOut> CoinsOut(string currency, decimal amount, string address, decimal? fee_priority = null)
+        {
+            var _params = new Dictionary<string, object>();
+            {
+                _params.Add("currency", currency);
+                _params.Add("amount", amount);
+                _params.Add("address", address);
+
+                if (fee_priority != null)
+                    _params.Add("fee_priority", fee_priority);
+            }
+
+            return await UserClient.CallApiGetAsync<CoinsOut>("/v1/user/coins/out", _params);
+        }
+
+        /// <summary>
+        /// Cancel BTC Transfer Request
+        /// </summary>
+        /// <param name="currency">A mandatory parameter. Currently only currency=“btc”, which means Bitcoin is supported.</param>
+        /// <param name="id">The unique ID of the BTC withdrawal request.</param>
+        /// <returns></returns>
+        public async Task<CoinsOut> CoinsCancel(string currency, string id)
+        {
+            var _params = new Dictionary<string, object>();
+            {
+                _params.Add("currency", currency);
+                _params.Add("id", id);
+            }
+
+            return await UserClient.CallApiGetAsync<CoinsOut>("/v1/user/coins/cancel", _params);
+        }
+
+        /// <summary>
+        /// Query Status of BTC Deposit and Transfer
+        /// You can query status of BTC deposits and transfers by using the following API
+        /// </summary>
+        /// <param name="currency">A mandatory parameter. Currently only currency=“btc”, which means Bitcoin is supported.</param>
+        /// <param name="id">The unique ID of the BTC withdrawal request. If this parameter is not specified, the API responds with a pending BTC withdrawal request if any.</param>
+        /// <returns></returns>
+        public async Task<CoinsStatus> CoinsStatus(string currency = "btc", string id = "")
+        {
+            var _params = new Dictionary<string, object>();
+            {
+                _params.Add("currency", currency);
+                if (String.IsNullOrEmpty(id) == false)
+                    _params.Add("id", id);
+            }
+
+            return await UserClient.CallApiGetAsync<CoinsStatus>("/v1/user/coins/status", _params);
         }
     }
 }

@@ -20,25 +20,25 @@ namespace Korbit.Sample
                 Console.WriteLine(_ticker.last);
             }
 
-            if (debug_step == 1)
+            if (debug_step == 2)
             {
                 var _deailed_ticker = await _public_api.DetailedTicker();
                 Console.WriteLine(_deailed_ticker.last);
             }
 
-            if (debug_step == 1)
+            if (debug_step == 3)
             {
                 var _order_book = await _public_api.OrderBook();
                 Console.WriteLine(_order_book.timestamp);
             }
 
-            if (debug_step == 1)
+            if (debug_step == 4)
             {
                 var _transactions = await _public_api.Transactions();
                 Console.WriteLine(_transactions.Count);
             }
 
-            if (debug_step == 1)
+            if (debug_step == 5)
             {
                 var _constants = await _public_api.Constants();
                 Console.WriteLine(_constants.minTradableLevel);
@@ -52,6 +52,29 @@ namespace Korbit.Sample
         {
             var __info_api = new KUserApi("", "", "", "");
 
+            if (debug_step == 1)
+            {
+                var _wallet = await __info_api.UserWallet("eth_krw");
+                Console.WriteLine(_wallet.available_qty("eth_krw"));
+            }
+
+            if (debug_step == 2)
+            {
+                var _traxs = await __info_api.Transactions("eth_krw");
+                Console.WriteLine(_traxs.Count);
+            }
+
+            if (debug_step == 3)
+            {
+                var _coins_out = await __info_api.CoinsOut("btc", 0.1m, "");
+                Console.WriteLine(_coins_out.status);
+            }
+
+            if (debug_step == 4)
+            {
+                var _coins_status = await __info_api.CoinsStatus("btc");
+                Console.WriteLine(_coins_status.Count);
+            }
         }
 
         /// <summary>

@@ -40,7 +40,7 @@ namespace XCT.BaseLib.API.Korbit
 
         public async Task<AccessToken> AccessToken()
         {
-            if (__access_token != null)
+            if (__access_token != null && String.IsNullOrEmpty(__access_token.access_token) == false)
             {
                 if (__access_token.CheckExpired() == true)
                     __access_token = await GetRefreshToken(__access_token);

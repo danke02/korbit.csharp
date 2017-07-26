@@ -109,6 +109,16 @@ namespace XCT.BaseLib.API.Korbit.User
         public List<CurrencyValue> available;
 
         /// <summary>
+        /// Amount of krw and coin currently unavailable for being on hold in the previous buy/sell orders
+        /// </summary>
+        public List<CurrencyValue> tradeInUse;
+
+        /// <summary>
+        /// Amount of krw and coin currently available for buy/sell orders
+        /// </summary>
+        public List<CurrencyValue> tradable;
+
+        /// <summary>
         /// 사용 가능 QTY
         /// </summary>
         public decimal available_qty(string coin_name)

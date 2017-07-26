@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using XCT.BaseLib.API.Korbit.User;
 
 namespace XCT.BaseLib.API.Korbit.Trading
 {
@@ -35,5 +37,6 @@ namespace XCT.BaseLib.API.Korbit.Trading
                 return __trade_client;
             }
         }
+
     }
 }
