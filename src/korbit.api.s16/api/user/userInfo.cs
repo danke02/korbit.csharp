@@ -5,10 +5,10 @@
     /// </summary>
     public class UserInfoPrefs
     {
-        /// <summary>
-        /// The threshold of BTC withdrawal amount that requires MFA.Value 0 means MFA is always required
-        /// </summary>
-        public string coinOutMfaThreshold;
+        ///// <summary>
+        ///// The threshold of BTC withdrawal amount that requires MFA.Value 0 means MFA is always required
+        ///// </summary>
+        //public string coinOutMfaThreshold;
 
         /// <summary>
         /// The user preference whether to receive an email for successful withdrawal and deposit of KRW
@@ -20,10 +20,10 @@
         /// </summary>
         public string notifyTrades;
 
-        /// <summary>
-        /// The user preference whether MFA is required to log in
-        /// </summary>
-        public string verifyMfaOnLogin;
+        ///// <summary>
+        ///// The user preference whether MFA is required to log in
+        ///// </summary>
+        //public string verifyMfaOnLogin;
     }
 
     /// <summary>
@@ -62,20 +62,20 @@
         /// </summary>
         public string gender;
 
-        /// <summary>
-        /// Maximum limit on the amount of coins that can be sent per day
-        /// </summary>
-        public decimal maxCoinOutPerDay;
+        ///// <summary>
+        ///// Maximum limit on the amount of coins that can be sent per day
+        ///// </summary>
+        //public decimal maxCoinOutPerDay;
 
-        /// <summary>
-        /// Maximum limit on the amount of fiat currency that can be deposited per day
-        /// </summary>
-        public decimal maxFiatInPerDay;
+        ///// <summary>
+        ///// Maximum limit on the amount of fiat currency that can be deposited per day
+        ///// </summary>
+        //public decimal maxFiatInPerDay;
 
-        /// <summary>
-        /// Maximum limit on the amount of fiat currency than can be withdrawn per day
-        /// </summary>
-        public decimal maxFiatOutPerDay;
+        ///// <summary>
+        ///// Maximum limit on the amount of fiat currency than can be withdrawn per day
+        ///// </summary>
+        //public decimal maxFiatOutPerDay;
 
         /// <summary>
         /// 
@@ -87,14 +87,14 @@
         /// </summary>
         public int userLevel;
 
-        /// <summary>
-        /// The amount of coins withdrawn for today
-        /// </summary>
-        public decimal coinOutToday;
+        ///// <summary>
+        ///// The amount of coins withdrawn for today
+        ///// </summary>
+        //public decimal coinOutToday;
 
-        /// <summary>
-        /// The amount of coins withdrawn during the last 24 hours
-        /// </summary>
-        public decimal coinOutWithin24h;
+        ///// <summary>
+        ///// The amount of coins withdrawn during the last 24 hours
+        ///// </summary>
+        //public decimal coinOutWithin24h;
     }
 }

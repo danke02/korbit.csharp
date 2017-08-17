@@ -49,6 +49,28 @@ namespace XCT.BaseLib.API.Korbit.User
         /// <summary>
         ///
         /// </summary>
+        /// <returns></returns>
+        public async Task<UserAccounts> UserAccounts()
+        {
+            var _params = new Dictionary<string, object>();
+
+            return await UserClient.CallApiGetAsync<UserAccounts>("/v1/user/accounts", _params);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <returns></returns>
+        public async Task<UserBalances> UserBalances()
+        {
+            var _params = new Dictionary<string, object>();
+
+            return await UserClient.CallApiGetAsync<UserBalances>("/v1/user/balances", _params);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
         /// <returns>Constants</returns>
         public async Task<UserWallet> UserWallet(string currency_pair = "btc_krw")
         {
