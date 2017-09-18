@@ -9,6 +9,8 @@ namespace XCT.BaseLib.API.Korbit.Public
     /// </summary>
     public class KPublicApi
     {
+        public const string DealerName = "Korbit";
+
         private KorbitClient __api_client = null;
 
         private KorbitClient APiClient
@@ -37,14 +39,14 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// Bitcoin trading is default. As our BETA service, you can also specify “etc_krw” for Ethereum Classic 
         /// trading and “eth_krw” for Ethereum trading.</param>
         /// <returns></returns>
-        public async Task<PublicTickerData> Ticker(string currency_pair = "btc_krw")
+        public async Task<PublicTicker> Ticker(string currency_pair = "btc_krw")
         {
             var _params = new Dictionary<string, object>();
             {
-                _params.Add("currency_pair", currency_pair);
+                _params.Add("currency_pair", currency_pair.ToLower());
             }
 
-            return await APiClient.CallApiGetAsync<PublicTickerData>("/v1/ticker", _params);
+            return await APiClient.CallApiGetAsync<PublicTicker>("/v1/ticker", _params);
         }
 
         /// <summary>
@@ -58,7 +60,7 @@ namespace XCT.BaseLib.API.Korbit.Public
         {
             var _params = new Dictionary<string, object>();
             {
-                _params.Add("currency_pair", currency_pair);
+                _params.Add("currency_pair", currency_pair.ToLower());
             }
 
             return await APiClient.CallApiGetAsync<PublicDetailedTicker>("/v1/ticker/detailed", _params);
@@ -72,15 +74,15 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// Ethereum Classic trading and “eth_krw” for Ethereum trading.</param>
         /// <param name="category">List ask orders only if category=“ask”, bid orders only if category=“bid”, all orders if category=“all”.</param>
         /// <returns></returns>
-        public async Task<OrderBook> OrderBook(string currency_pair = "btc_krw", OrderCategory category = OrderCategory.all)
+        public async Task<PublicOrderBook> OrderBook(string currency_pair = "btc_krw", OrderCategory category = OrderCategory.all)
         {
             var _params = new Dictionary<string, object>();
             {
-                _params.Add("currency_pair", currency_pair);
+                _params.Add("currency_pair", currency_pair.ToLower());
                 _params.Add("category", category);
             }
 
-            return await APiClient.CallApiGetAsync<OrderBook>("/v1/orderbook", _params);
+            return await APiClient.CallApiGetAsync<PublicOrderBook>("/v1/orderbook", _params);
         }
 
         /// <summary>
@@ -93,24 +95,24 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// If this parameter is specified as minute, it queries data within the last minute, 
         /// hour means the last hour, day means the last 24 hours.</param>
         /// <returns></returns>
-        public async Task<List<Transaction>> Transactions(string currency_pair = "btc_krw", TimeSymbol time = TimeSymbol.hour)
+        public async Task<PublicCompleteOrders> CompleteOrders(string currency_pair = "btc_krw", TimeSymbol time = TimeSymbol.hour)
         {
             var _params = new Dictionary<string, object>();
             {
-                _params.Add("currency_pair", currency_pair);
+                _params.Add("currency_pair", currency_pair.ToLower());
                 _params.Add("time", time);
             }
 
-            return await APiClient.CallApiGetAsync<List<Transaction>>("/v1/transactions", _params);
+            return await APiClient.CallApiGetAsync<PublicCompleteOrders>("/v1/transactions", _params);
         }
 
         /// <summary>
         /// You can get constant values such as fee rates and minimum amount of BTC to transfer, etc.
         /// </summary>
         /// <returns>Constants</returns>
-        public async Task<Constants> Constants()
+        public async Task<PublicConstants> Constants()
         {
-            return await APiClient.CallApiGetAsync<Constants>("/v1/constants");
+            return await APiClient.CallApiGetAsync<PublicConstants>("/v1/constants");
         }
     }
 }

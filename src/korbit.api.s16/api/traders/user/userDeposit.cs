@@ -3,7 +3,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public class UserAccountData
+    public class UserDepositAddress
     {
         /// <summary>
         /// The address of your wallet.
@@ -35,42 +35,42 @@
     /// <summary>
     /// 
     /// </summary>
-    public class UserAccountDeposit
+    public class UserDepositCoins
     {
         /// <summary>
         /// 
         /// </summary>
-        public UserAccountData btc;
+        public UserDepositAddress btc;
 
         /// <summary>
         /// 
         /// </summary>
-        public UserAccountData etc;
+        public UserDepositAddress etc;
 
         /// <summary>
         /// 
         /// </summary>
-        public UserAccountData eth;
+        public UserDepositAddress eth;
 
         /// <summary>
         /// 
         /// </summary>
-        public UserAccountData xrp;
+        public UserDepositAddress xrp;
 
         /// <summary>
         /// 
         /// </summary>
-        public UserAccountData krw;
+        public UserDepositAddress krw;
     }
 
     /// <summary>
     /// GET https://api.korbit.co.kr/v1/user/accounts
     /// </summary>
-    public class UserAccounts
+    public class UserDeposit
     {
         /// <summary>
         /// 
         /// </summary>
-        public UserAccountDeposit deposit;
+        public UserDepositCoins deposit;
     }
 }

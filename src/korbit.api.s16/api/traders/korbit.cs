@@ -119,6 +119,5 @@ namespace XCT.BaseLib.API.Korbit
                 return JsonConvert.DeserializeObject<T>(_response.Content);
             }
         }
-
     }
 }

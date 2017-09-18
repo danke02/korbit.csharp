@@ -36,8 +36,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="api\user\" />
-    <Folder Include="api\trading\" />
+    <Folder Include="api\traders\user\" />
+    <Folder Include="api\traders\trading\" />
     <Folder Include="lib\" />
   </ItemGroup>
 

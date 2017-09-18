@@ -3,7 +3,7 @@
     /// <summary>
     /// 시장 현황 (Ticker)
     /// </summary>
-    public class PublicTickerData
+    public class PublicTicker
     {
         /// <summary>
         /// Unix timestamp in milliseconds of the last filled order.

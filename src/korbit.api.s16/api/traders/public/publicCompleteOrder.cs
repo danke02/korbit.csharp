@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace XCT.BaseLib.API.Korbit.Public
@@ -7,7 +8,7 @@ namespace XCT.BaseLib.API.Korbit.Public
     /// <summary>
     /// 체결 내역 ( List of Filled Orders )
     /// </summary>
-    public class Transaction
+    public class PublicCompleteOrder
     {
         /// <summary>
         /// Timestamp of last filled order.
@@ -37,12 +38,16 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// <param name="price"></param>
         /// <param name="amount"></param>
         [JsonConstructor]
-        public Transaction(string timestamp, string tid, string price, string amount)
+        public PublicCompleteOrder(string timestamp, string tid, string price, string amount)
         {
             this.timestamp = Convert.ToInt64(timestamp);
             this.tid = Convert.ToInt64(tid);
             this.price = decimal.Parse(price, NumberStyles.Float);
             this.amount = decimal.Parse(amount, NumberStyles.Float);
         }
+    }
+
+    public class PublicCompleteOrders : List<PublicCompleteOrder>
+    {
     }
 }

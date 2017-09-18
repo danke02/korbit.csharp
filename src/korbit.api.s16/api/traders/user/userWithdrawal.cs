@@ -4,9 +4,25 @@ using System.Linq;
 namespace XCT.BaseLib.API.Korbit.User
 {
     /// <summary>
+    /// 
+    /// </summary>
+    public class UserWithdrawal
+    {
+        /// <summary>
+        /// The unique ID of the BTC withdrawal request. You can use this ID to cancel a BTC withdrawal request or get the status of it.
+        /// </summary>
+        public string transferId;
+
+        /// <summary>
+        /// 'success’ if the BTC withdrawal was successful, an error symbol otherwise.
+        /// </summary>
+        public string status;
+    }
+
+    /// <summary>
     /// Query Status of BTC Deposit and Transfer
     /// </summary>
-    public class CoinsStatusData
+    public class UserCoinsStatusData
     {
         /// <summary>
         /// Unix timestamp in milliseconds by the time the BTC deposit or withdrawal request was created.
@@ -16,7 +32,7 @@ namespace XCT.BaseLib.API.Korbit.User
         /// <summary>
         /// The unique ID of BTC deposit or withdrawal request.
         /// </summary>
-        public string id;
+        public ulong id;
 
         /// <summary>
         /// “coin-in” if it is a BTC deposit request, “coin-out” if it is a BTC withdrawal request.
@@ -52,7 +68,7 @@ namespace XCT.BaseLib.API.Korbit.User
     /// <summary>
     /// 
     /// </summary>
-    public class CoinsStatus : List<CoinsStatusData>
+    public class UserCoinsStatus : List<UserCoinsStatusData>
     {
 
     }

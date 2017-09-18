@@ -4,7 +4,7 @@
     /// 각종 제약조건 ( Constants )
     /// You can get constant values such as fee rates and minimum amount of BTC to transfer, etc.
     /// </summary>
-    public class Constants
+    public class PublicConstants
     {
         /// <summary>
         /// Fixed fee for KRW withdrawals. ( 1,000 KRW )

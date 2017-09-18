@@ -6,7 +6,7 @@ namespace XCT.BaseLib.API.Korbit.Public
     /// <summary>
     /// 
     /// </summary>
-    public class Order
+    public class PublicOrder
     {
         /// <summary>
         /// 가격
@@ -27,7 +27,7 @@ namespace XCT.BaseLib.API.Korbit.Public
     /// <summary>
     /// 
     /// </summary>
-    public class OrderBook
+    public class PublicOrderBook
     {
         /// <summary>
         /// Unix timestamp in milliseconds of the last placed order.
@@ -52,13 +52,13 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<Order> GetBids()
+        public List<PublicOrder> GetBids()
         {
-            var _result = new List<Order>();
+            var _result = new List<PublicOrder>();
 
             foreach (var b in bids)
             {
-                var o = new Order()
+                var o = new PublicOrder()
                 {
                     price = b[0].Value<decimal>(),
                     quantity = b[1].Value<decimal>(),
@@ -75,13 +75,13 @@ namespace XCT.BaseLib.API.Korbit.Public
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<Order> GetAsks()
+        public List<PublicOrder> GetAsks()
         {
-            var _result = new List<Order>();
+            var _result = new List<PublicOrder>();
 
             foreach (var a in asks)
             {
-                var o = new Order()
+                var o = new PublicOrder()
                 {
                     price = a[0].Value<decimal>(),
                     quantity = a[1].Value<decimal>(),
