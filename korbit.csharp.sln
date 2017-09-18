@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26621.2
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1F4A270-5796-4483-8383-35F15CCAB36E}"
 	ProjectSection(SolutionItems) = preProject
@@ -21,20 +21,52 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.api.s16", "src\korbi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample.c11", "src\korbit.sample.c11\korbit.sample.c11.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api.n46", "src\korbit.api.n46\korbit.api.n46.csproj", "{D89F2E3A-9623-48C7-B15E-C262DAC79C72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{CD24CF0D-A7B7-4BC8-862D-71CE7917F3AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinSdk.BaseLib.n46", "..\..\..\odinsoft-git\public\open-sdk\src\OdinSdk.BaseLib.n46\OdinSdk.BaseLib.n46.csproj", "{D9EA385B-2E47-4CBF-877F-55A01D03F598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Debug|x64.Build.0 = Debug|Any CPU
 		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Release|x64.ActiveCfg = Release|Any CPU
+		{FF1E15F3-9098-4198-9890-BAD9B1891971}.Release|x64.Build.0 = Release|Any CPU
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Debug|x64.Build.0 = Debug|Any CPU
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|x64.ActiveCfg = Release|Any CPU
+		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|x64.Build.0 = Release|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|x64.Build.0 = Debug|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|x64.ActiveCfg = Release|Any CPU
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|x64.Build.0 = Release|Any CPU
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Debug|x64.ActiveCfg = Debug|x64
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Debug|x64.Build.0 = Debug|x64
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Release|x64.ActiveCfg = Release|x64
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +74,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FF1E15F3-9098-4198-9890-BAD9B1891971} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+		{D89F2E3A-9623-48C7-B15E-C262DAC79C72} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
+		{D9EA385B-2E47-4CBF-877F-55A01D03F598} = {CD24CF0D-A7B7-4BC8-862D-71CE7917F3AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA086DB4-1D3F-4B6E-A1FA-222F45B8C691}
