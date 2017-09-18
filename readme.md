@@ -27,6 +27,12 @@ Since I spent several days developing and testing this kit I would appreciate an
 
 - ETH: 0x556E7EdbcCd669a42f00c1Df53D550C00814B0e3
 
+```
+2017-09-18: Peter.Kim 1 ETH
+
+```
+
+
 ## Contact
 
 Home-Page: http://www.odinsoftware.co.kr
