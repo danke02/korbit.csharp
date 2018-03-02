@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>Korbit.Sample</AssemblyName>
     <RootNamespace>Korbit.Sample</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\korbit.api.s16\korbit.api.s16.csproj" />
+    <ProjectReference Include="..\korbit.api.c20\korbit.api.c20.csproj" />
   </ItemGroup>
 
 </Project>

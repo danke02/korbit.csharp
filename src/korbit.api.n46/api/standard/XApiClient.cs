@@ -23,7 +23,7 @@ namespace XCT.BaseLib.API
         protected string __secret_key;
 
         protected const string __content_type = "application/json";
-        protected const string __user_agent = "btc-trading/5.2.2017.01";
+        protected const string __user_agent = "btc-trading/5.2.2018.03";
 
         /// <summary>
         /// 
