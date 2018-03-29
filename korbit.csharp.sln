@@ -17,11 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logo-files", "logo-files", 
 		logo-files\korbit.api.png = logo-files\korbit.api.png
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample.c20", "src\korbit.sample.c20\korbit.sample.c20.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.sample", "src\korbit.sample\korbit.sample.csproj", "{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api.n46", "src\korbit.api.n46\korbit.api.n46.csproj", "{D89F2E3A-9623-48C7-B15E-C262DAC79C72}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korbit.api.c20", "src\korbit.api.c20\korbit.api.c20.csproj", "{AAE83D29-0747-4EC2-89D3-B57E31112B6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "korbit.api", "src\korbit.api\korbit.api.csproj", "{AAE83D29-0747-4EC2-89D3-B57E31112B6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +37,6 @@ Global
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|x64.ActiveCfg = Release|Any CPU
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0}.Release|x64.Build.0 = Release|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Debug|x64.Build.0 = Debug|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|x64.ActiveCfg = Release|Any CPU
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72}.Release|x64.Build.0 = Release|Any CPU
 		{AAE83D29-0747-4EC2-89D3-B57E31112B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AAE83D29-0747-4EC2-89D3-B57E31112B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAE83D29-0747-4EC2-89D3-B57E31112B6F}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -61,7 +51,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B2D5B5F9-0908-4034-86DA-F8F99BA945C0} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
-		{D89F2E3A-9623-48C7-B15E-C262DAC79C72} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
 		{AAE83D29-0747-4EC2-89D3-B57E31112B6F} = {E76D87F1-92D1-4911-8EC1-8E7249DD0C00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

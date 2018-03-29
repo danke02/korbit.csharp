@@ -10,9 +10,9 @@ We promise to continuously improve.
 
 ## Tools
 
-- Visual Studio 2017
+- Microsfot Visual Studio community 2017 version 15.4.0
 
-- .net core 2.0, .net standard 2.0, .net framework 4.6
+- .net core 2.0, .net framework 4.7
 
 ## License
 
@@ -33,9 +33,9 @@ Since I spent several days developing and testing this kit I would appreciate an
 ```
 2017-09-18: 1 ETH dominated by Peter.Kim 
 
-2018-03-02: upgrade .net core 1.1 to 2.0
+2018-03-02: upgrade .net core 1.1 to 2.0, convert standard library to core library
 
-2018-03-02: convert standard library to core library
+2018-03-29: upgrade .net core 2.0 & net47
 
 ```
 

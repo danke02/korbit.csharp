@@ -7,7 +7,7 @@
     <AssemblyTitle>Korbit.API.Core</AssemblyTitle>
     <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>SEONGAHN LEE</Authors>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFrameworks>net47;netcoreapp2.0</TargetFrameworks>
     <AssemblyName>Korbit.API</AssemblyName>
     <PackageId>Korbit.API.Core</PackageId>
     <PackageTags>odinsoft;sdk;api;bitcoin;trading-api;korbit;cryptocurrency</PackageTags>
